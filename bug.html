@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be replaced.
+  </div>
+  <script>
+    // Incorrect way to replace the content of a div
+    document.getElementById("myDiv").innerHTML = 123; 
+    //Adding a number directly. It works but is not semantic. 
+    // It should be wrapped with a text node.
+
+    //Correct way to replace the content of a div
+    document.getElementById("myDiv").textContent = "123"; 
+  </script>
+</body>
+</html>
